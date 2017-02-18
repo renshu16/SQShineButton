@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9AEB4381E5848DC00915DF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AEB4371E5848DC00915DF7 /* main.m */; };
+		F9AEB43B1E5848DC00915DF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AEB43A1E5848DC00915DF7 /* AppDelegate.m */; };
+		F9AEB43E1E5848DC00915DF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AEB43D1E5848DC00915DF7 /* ViewController.m */; };
+		F9AEB4411E5848DC00915DF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9AEB43F1E5848DC00915DF7 /* Main.storyboard */; };
+		F9AEB4431E5848DC00915DF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9AEB4421E5848DC00915DF7 /* Assets.xcassets */; };
+		F9AEB4461E5848DC00915DF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9AEB4441E5848DC00915DF7 /* LaunchScreen.storyboard */; };
+		F9AEB4511E5848DC00915DF7 /* ShineButtomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AEB4501E5848DC00915DF7 /* ShineButtomTests.m */; };
+		F9AEB45D1E58494900915DF7 /* SQShineButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AEB45C1E58494900915DF7 /* SQShineButton.m */; };
+		F9AEB4601E584A2200915DF7 /* SQShineParams.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AEB45F1E584A2200915DF7 /* SQShineParams.m */; };
+		F9AEB4621E584E7200915DF7 /* WCLShineButton.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F9AEB4611E584E7200915DF7 /* WCLShineButton.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9AEB44D1E5848DC00915DF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9AEB42B1E5848DC00915DF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9AEB4321E5848DC00915DF7;
+			remoteInfo = ShineButtom;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9AEB4331E5848DC00915DF7 /* ShineButtom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShineButtom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9AEB4371E5848DC00915DF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F9AEB4391E5848DC00915DF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F9AEB43A1E5848DC00915DF7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F9AEB43C1E5848DC00915DF7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F9AEB43D1E5848DC00915DF7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F9AEB4401E5848DC00915DF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9AEB4421E5848DC00915DF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9AEB4451E5848DC00915DF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F9AEB4471E5848DC00915DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9AEB44C1E5848DC00915DF7 /* ShineButtomTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShineButtomTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9AEB4501E5848DC00915DF7 /* ShineButtomTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShineButtomTests.m; sourceTree = "<group>"; };
+		F9AEB4521E5848DC00915DF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9AEB45B1E58494900915DF7 /* SQShineButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQShineButton.h; sourceTree = "<group>"; };
+		F9AEB45C1E58494900915DF7 /* SQShineButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQShineButton.m; sourceTree = "<group>"; };
+		F9AEB45E1E584A2200915DF7 /* SQShineParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQShineParams.h; sourceTree = "<group>"; };
+		F9AEB45F1E584A2200915DF7 /* SQShineParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQShineParams.m; sourceTree = "<group>"; };
+		F9AEB4611E584E7200915DF7 /* WCLShineButton.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WCLShineButton.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9AEB4301E5848DC00915DF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9AEB4491E5848DC00915DF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9AEB42A1E5848DC00915DF7 = {
+			isa = PBXGroup;
+			children = (
+				F9AEB4351E5848DC00915DF7 /* ShineButtom */,
+				F9AEB44F1E5848DC00915DF7 /* ShineButtomTests */,
+				F9AEB4341E5848DC00915DF7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9AEB4341E5848DC00915DF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9AEB4331E5848DC00915DF7 /* ShineButtom.app */,
+				F9AEB44C1E5848DC00915DF7 /* ShineButtomTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9AEB4351E5848DC00915DF7 /* ShineButtom */ = {
+			isa = PBXGroup;
+			children = (
+				F9AEB4611E584E7200915DF7 /* WCLShineButton.bundle */,
+				F9AEB4391E5848DC00915DF7 /* AppDelegate.h */,
+				F9AEB43A1E5848DC00915DF7 /* AppDelegate.m */,
+				F9AEB43C1E5848DC00915DF7 /* ViewController.h */,
+				F9AEB43D1E5848DC00915DF7 /* ViewController.m */,
+				F9AEB43F1E5848DC00915DF7 /* Main.storyboard */,
+				F9AEB4421E5848DC00915DF7 /* Assets.xcassets */,
+				F9AEB4441E5848DC00915DF7 /* LaunchScreen.storyboard */,
+				F9AEB4471E5848DC00915DF7 /* Info.plist */,
+				F9AEB4361E5848DC00915DF7 /* Supporting Files */,
+				F9AEB45B1E58494900915DF7 /* SQShineButton.h */,
+				F9AEB45C1E58494900915DF7 /* SQShineButton.m */,
+				F9AEB45E1E584A2200915DF7 /* SQShineParams.h */,
+				F9AEB45F1E584A2200915DF7 /* SQShineParams.m */,
+			);
+			path = ShineButtom;
+			sourceTree = "<group>";
+		};
+		F9AEB4361E5848DC00915DF7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9AEB4371E5848DC00915DF7 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9AEB44F1E5848DC00915DF7 /* ShineButtomTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9AEB4501E5848DC00915DF7 /* ShineButtomTests.m */,
+				F9AEB4521E5848DC00915DF7 /* Info.plist */,
+			);
+			path = ShineButtomTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9AEB4321E5848DC00915DF7 /* ShineButtom */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9AEB4551E5848DC00915DF7 /* Build configuration list for PBXNativeTarget "ShineButtom" */;
+			buildPhases = (
+				F9AEB42F1E5848DC00915DF7 /* Sources */,
+				F9AEB4301E5848DC00915DF7 /* Frameworks */,
+				F9AEB4311E5848DC00915DF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShineButtom;
+			productName = ShineButtom;
+			productReference = F9AEB4331E5848DC00915DF7 /* ShineButtom.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9AEB44B1E5848DC00915DF7 /* ShineButtomTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9AEB4581E5848DC00915DF7 /* Build configuration list for PBXNativeTarget "ShineButtomTests" */;
+			buildPhases = (
+				F9AEB4481E5848DC00915DF7 /* Sources */,
+				F9AEB4491E5848DC00915DF7 /* Frameworks */,
+				F9AEB44A1E5848DC00915DF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9AEB44E1E5848DC00915DF7 /* PBXTargetDependency */,
+			);
+			name = ShineButtomTests;
+			productName = ShineButtomTests;
+			productReference = F9AEB44C1E5848DC00915DF7 /* ShineButtomTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9AEB42B1E5848DC00915DF7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = rensq;
+				TargetAttributes = {
+					F9AEB4321E5848DC00915DF7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5XKUVDTMEL;
+						ProvisioningStyle = Automatic;
+					};
+					F9AEB44B1E5848DC00915DF7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 5XKUVDTMEL;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F9AEB4321E5848DC00915DF7;
+					};
+				};
+			};
+			buildConfigurationList = F9AEB42E1E5848DC00915DF7 /* Build configuration list for PBXProject "ShineButtom" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9AEB42A1E5848DC00915DF7;
+			productRefGroup = F9AEB4341E5848DC00915DF7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9AEB4321E5848DC00915DF7 /* ShineButtom */,
+				F9AEB44B1E5848DC00915DF7 /* ShineButtomTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9AEB4311E5848DC00915DF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9AEB4461E5848DC00915DF7 /* LaunchScreen.storyboard in Resources */,
+				F9AEB4431E5848DC00915DF7 /* Assets.xcassets in Resources */,
+				F9AEB4621E584E7200915DF7 /* WCLShineButton.bundle in Resources */,
+				F9AEB4411E5848DC00915DF7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9AEB44A1E5848DC00915DF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9AEB42F1E5848DC00915DF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9AEB43E1E5848DC00915DF7 /* ViewController.m in Sources */,
+				F9AEB45D1E58494900915DF7 /* SQShineButton.m in Sources */,
+				F9AEB43B1E5848DC00915DF7 /* AppDelegate.m in Sources */,
+				F9AEB4381E5848DC00915DF7 /* main.m in Sources */,
+				F9AEB4601E584A2200915DF7 /* SQShineParams.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9AEB4481E5848DC00915DF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9AEB4511E5848DC00915DF7 /* ShineButtomTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9AEB44E1E5848DC00915DF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9AEB4321E5848DC00915DF7 /* ShineButtom */;
+			targetProxy = F9AEB44D1E5848DC00915DF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9AEB43F1E5848DC00915DF7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9AEB4401E5848DC00915DF7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9AEB4441E5848DC00915DF7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9AEB4451E5848DC00915DF7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9AEB4531E5848DC00915DF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F9AEB4541E5848DC00915DF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F9AEB4561E5848DC00915DF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5XKUVDTMEL;
+				INFOPLIST_FILE = ShineButtom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rensq.ShineButtom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F9AEB4571E5848DC00915DF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5XKUVDTMEL;
+				INFOPLIST_FILE = ShineButtom/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rensq.ShineButtom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F9AEB4591E5848DC00915DF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5XKUVDTMEL;
+				INFOPLIST_FILE = ShineButtomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rensq.ShineButtomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShineButtom.app/ShineButtom";
+			};
+			name = Debug;
+		};
+		F9AEB45A1E5848DC00915DF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5XKUVDTMEL;
+				INFOPLIST_FILE = ShineButtomTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rensq.ShineButtomTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShineButtom.app/ShineButtom";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9AEB42E1E5848DC00915DF7 /* Build configuration list for PBXProject "ShineButtom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9AEB4531E5848DC00915DF7 /* Debug */,
+				F9AEB4541E5848DC00915DF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9AEB4551E5848DC00915DF7 /* Build configuration list for PBXNativeTarget "ShineButtom" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9AEB4561E5848DC00915DF7 /* Debug */,
+				F9AEB4571E5848DC00915DF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F9AEB4581E5848DC00915DF7 /* Build configuration list for PBXNativeTarget "ShineButtomTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9AEB4591E5848DC00915DF7 /* Debug */,
+				F9AEB45A1E5848DC00915DF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9AEB42B1E5848DC00915DF7 /* Project object */;
+}
