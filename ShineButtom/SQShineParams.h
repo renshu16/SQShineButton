@@ -24,7 +24,7 @@
 @property(nonatomic,retain)UIColor *smallShineColor;
 @property(nonatomic,assign)CGFloat shineSize;
 
-@property(nonatomic,retain)NSArray *colorRandom;
+@property(nonatomic,retain)NSArray<UIColor *> *colorRandom;
 
 + (UIImage *)imageFromBundle:(NSString *)imageName;
 

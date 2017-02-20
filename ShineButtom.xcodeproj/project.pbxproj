@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F978C1701E5A7EF700E798C3 /* SQShineClickLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F978C16F1E5A7EF700E798C3 /* SQShineClickLayer.m */; };
+		F978C1731E5A8EDA00E798C3 /* SQShineLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F978C1721E5A8EDA00E798C3 /* SQShineLayer.m */; };
+		F978C1761E5AC67C00E798C3 /* SQShineAngleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F978C1751E5AC67C00E798C3 /* SQShineAngleLayer.m */; };
 		F9AEB4381E5848DC00915DF7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AEB4371E5848DC00915DF7 /* main.m */; };
 		F9AEB43B1E5848DC00915DF7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AEB43A1E5848DC00915DF7 /* AppDelegate.m */; };
 		F9AEB43E1E5848DC00915DF7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AEB43D1E5848DC00915DF7 /* ViewController.m */; };
@@ -30,6 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F978C16E1E5A7EF700E798C3 /* SQShineClickLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQShineClickLayer.h; sourceTree = "<group>"; };
+		F978C16F1E5A7EF700E798C3 /* SQShineClickLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQShineClickLayer.m; sourceTree = "<group>"; };
+		F978C1711E5A8EDA00E798C3 /* SQShineLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQShineLayer.h; sourceTree = "<group>"; };
+		F978C1721E5A8EDA00E798C3 /* SQShineLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQShineLayer.m; sourceTree = "<group>"; };
+		F978C1741E5AC67C00E798C3 /* SQShineAngleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQShineAngleLayer.h; sourceTree = "<group>"; };
+		F978C1751E5AC67C00E798C3 /* SQShineAngleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQShineAngleLayer.m; sourceTree = "<group>"; };
 		F9AEB4331E5848DC00915DF7 /* ShineButtom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShineButtom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9AEB4371E5848DC00915DF7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F9AEB4391E5848DC00915DF7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +112,12 @@
 				F9AEB45C1E58494900915DF7 /* SQShineButton.m */,
 				F9AEB45E1E584A2200915DF7 /* SQShineParams.h */,
 				F9AEB45F1E584A2200915DF7 /* SQShineParams.m */,
+				F978C16E1E5A7EF700E798C3 /* SQShineClickLayer.h */,
+				F978C16F1E5A7EF700E798C3 /* SQShineClickLayer.m */,
+				F978C1711E5A8EDA00E798C3 /* SQShineLayer.h */,
+				F978C1721E5A8EDA00E798C3 /* SQShineLayer.m */,
+				F978C1741E5AC67C00E798C3 /* SQShineAngleLayer.h */,
+				F978C1751E5AC67C00E798C3 /* SQShineAngleLayer.m */,
 			);
 			path = ShineButtom;
 			sourceTree = "<group>";
@@ -230,9 +245,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9AEB43E1E5848DC00915DF7 /* ViewController.m in Sources */,
+				F978C1731E5A8EDA00E798C3 /* SQShineLayer.m in Sources */,
 				F9AEB45D1E58494900915DF7 /* SQShineButton.m in Sources */,
 				F9AEB43B1E5848DC00915DF7 /* AppDelegate.m in Sources */,
 				F9AEB4381E5848DC00915DF7 /* main.m in Sources */,
+				F978C1761E5AC67C00E798C3 /* SQShineAngleLayer.m in Sources */,
+				F978C1701E5A7EF700E798C3 /* SQShineClickLayer.m in Sources */,
 				F9AEB4601E584A2200915DF7 /* SQShineParams.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +450,7 @@
 				F9AEB4571E5848DC00915DF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9AEB4581E5848DC00915DF7 /* Build configuration list for PBXNativeTarget "ShineButtomTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +459,7 @@
 				F9AEB45A1E5848DC00915DF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

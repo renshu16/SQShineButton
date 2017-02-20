@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SQShineParams.h"
+#import "SQShineClickLayer.h"
+#import "SQShineLayer.h"
+#import "SQShineAngleLayer.h"
+
 @interface SQShineButton : UIControl
 
 @end

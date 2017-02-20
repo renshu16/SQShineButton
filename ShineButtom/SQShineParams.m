@@ -18,6 +18,7 @@
         _bigShieColor = RGBCOLOR(255, 102, 102);
         _shineCount = 7;
         _shineTurnAngle = 20;
+        _enableFlashing = YES;
         _shineDistanceMutiple = 1.5;
         _smallShineOffsetAngle = 20;
         _smallShineColor = [UIColor lightGrayColor];
