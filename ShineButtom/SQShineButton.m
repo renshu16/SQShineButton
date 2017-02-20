@@ -39,7 +39,6 @@
 - (void)initLayers
 {
     _clickLayer = [[SQShineClickLayer alloc] init];
-    _clickLayer.animDuration = self.params.animDuration/3;
     _clickLayer.frame = self.bounds;
     [self.layer addSublayer:_clickLayer];
     

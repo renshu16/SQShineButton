@@ -8,13 +8,9 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
+#import "SQShineParams.h"
 
 @interface SQShineClickLayer : CALayer
-
-@property(nonatomic,retain)UIColor *color;
-@property(nonatomic,retain)UIColor *fillColor;
-@property(nonatomic,retain)UIImage *image;
-@property(nonatomic,assign)double animDuration;
 
 @property(nonatomic,assign)BOOL clicked;
 

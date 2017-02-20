@@ -7,13 +7,17 @@
 //
 
 #import "SQShineClickLayer.h"
-#import "SQShineParams.h"
+
 
 
 @interface SQShineClickLayer()
 
 @property(nonatomic,strong)CALayer *maskLayer;
 
+@property(nonatomic,retain)UIColor *color;
+@property(nonatomic,retain)UIColor *fillColor;
+@property(nonatomic,retain)UIImage *image;
+@property(nonatomic,assign)double animDuration;
 
 @end
 
@@ -47,6 +51,7 @@
 
 - (void)startAnim
 {
+    //添加一个遮罩层，创建遮罩层的缩放动画
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"transform.scale"];
     anim.duration = self.animDuration;
     anim.values = @[@0.4,@1,@0.9,@1];

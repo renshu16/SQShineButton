@@ -47,16 +47,19 @@
 
 - (void)initLayers
 {
-    self.shapeLayer.fillColor = [UIColor whiteColor].CGColor;
-    self.shapeLayer.strokeColor = self.fillColor.CGColor;
-    self.shapeLayer.lineWidth = 1.5;
-    [self addSublayer:self.shapeLayer];
+    _shapeLayer = [[CAShapeLayer alloc] init];
+    _shapeLayer.fillColor = [UIColor whiteColor].CGColor;
+    _shapeLayer.strokeColor = self.fillColor.CGColor;
+    _shapeLayer.lineWidth = 1.5;
+    [self addSublayer:_shapeLayer];
 }
 
 - (void)startAnim
 {
+    //帧动画, 此处也可用基础动画实现，基础动画可以只能设置fromValue和toValue，相当于只能设置两帧的帧动画
     CAKeyframeAnimation *anim = [CAKeyframeAnimation animationWithKeyPath:@"path"];
-    anim.duration = self.params.animDuration * 0.2;
+//    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"path"];
+    anim.duration = self.params.animDuration * 0.1;
     CGSize size = self.frame.size;
     CGPoint centerPoint = CGPointMake(size.width/2, size.height/2);
     
@@ -69,6 +72,9 @@
                                                         radius:size.width/2 * self.params.shineDistanceMutiple
                                                     startAngle:0 endAngle:M_PI *2.0 clockwise:NO];
     anim.delegate = self;
+//    anim.fromValue = (__bridge id _Nullable)(fromPath.CGPath);
+//    anim.toValue = (__bridge id _Nullable)(toPath.CGPath);
+//    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
     anim.values = @[(id)fromPath.CGPath,(id)toPath.CGPath];
     anim.timingFunctions = @[[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut]];
     anim.removedOnCompletion = NO;
@@ -79,11 +85,18 @@
     }
 }
 
+///闪烁动画，使用displayLink修改shapeLayer的strokeColor
 - (void)startFlash
 {
     self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(flashAction)];
-//    self.displayLink.frameInterval = 10; //DEPRECATED after iOS 10
-    self.displayLink.preferredFramesPerSecond = 6;
+
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10) {
+        //每秒调用6次
+        self.displayLink.preferredFramesPerSecond = 6;
+    }else{
+        //每隔10帧调用一次，对于iOS设备60Hz的刷新率来说，相当于每秒调用6次
+        self.displayLink.frameInterval = 10; //DEPRECATED after iOS 10
+    }
     [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
 }
 - (void)flashAction
@@ -104,13 +117,6 @@
     }
 }
 
-- (CAShapeLayer *)shapeLayer
-{
-    if (_shapeLayer == nil){
-        _shapeLayer = [[CAShapeLayer alloc] init];
-    }
-    return _shapeLayer;
-}
 - (void)setFillColor:(UIColor *)fillColor
 {
     _fillColor = fillColor;
