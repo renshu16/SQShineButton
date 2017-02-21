@@ -43,6 +43,7 @@
 {
     _fillColor = RGBCOLOR(255, 102, 102);
     _params = [[SQShineParams alloc] init];
+//    _params.enableFlashing = NO;
 }
 
 - (void)initLayers

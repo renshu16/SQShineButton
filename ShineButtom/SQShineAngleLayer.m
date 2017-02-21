@@ -9,6 +9,9 @@
 #import "SQShineAngleLayer.h"
 
 @interface SQShineAngleLayer()<CAAnimationDelegate>
+{
+    int flashCount;
+}
 
 @property(nonatomic,strong)NSMutableArray<CAShapeLayer*> *shineLayers;
 @property(nonatomic,strong)NSMutableArray<CAShapeLayer*> *smallShineLayers;
@@ -27,7 +30,6 @@
         _shineLayers = [[NSMutableArray alloc] init];
         _smallShineLayers = [[NSMutableArray alloc] init];
         [self addShines];
-    
     }
     return self;
 }
@@ -37,16 +39,17 @@
     CGFloat startAngle = 0;
     CGFloat angle = M_PI*2/self.params.shineCount + startAngle;
     if (self.params.shineCount %2 != 0) {
-        startAngle = M_PI*2 - angle/self.params.shineCount;
+        startAngle = M_PI*2 - angle/2;
     }
     CGFloat radius = self.frame.size.width/2 * self.params.shineDistanceMutiple;
-    CGFloat bigWidth = self.frame.size.width * 0.15;
+    CGFloat bigWidth = radius * 0.25;
     CGFloat smallWidth = bigWidth*0.66;
     
     for (int i=0; i<self.params.shineCount; i++) {
+        //绘制大shine
         CAShapeLayer *bigShine = [[CAShapeLayer alloc] init];
-        if (self.params.shineSize != 0) {
-            bigWidth = self.params.shineSize;
+        if (self.params.shineRadius != 0) {
+            bigWidth = self.params.shineRadius;
         }
         CGPoint center = [self getShineCenter:startAngle + angle*i radius:radius];
         CGPathRef path = [UIBezierPath bezierPathWithArcCenter:center radius:bigWidth
@@ -59,7 +62,7 @@
         }
         [self addSublayer:bigShine];
         [self.shineLayers addObject:bigShine];
-        
+        //绘制小太阳
         CAShapeLayer *smallShine = [[CAShapeLayer alloc] init];
         CGFloat smallAngle = startAngle + angle*i - self.params.smallShineOffsetAngle*M_PI/180;
         CGPoint smallCenter = [self getShineCenter:smallAngle radius:radius - bigWidth];
@@ -76,6 +79,10 @@
     }
 }
 
+
+/**
+ 计算shine的中点坐标
+ */
 - (CGPoint)getShineCenter:(CGFloat)angle radius:(CGFloat)radius
 {
     CGFloat x0 = self.bounds.size.width/2;
@@ -123,11 +130,16 @@
         CABasicAnimation *smallAnim = [self getAngleAnim:smallShine angle:startAngle + angle*i - self.params.smallShineOffsetAngle*M_PI/180 radius:radius - subRadius];
         [bigShine addAnimation:anim forKey:@"path"];
         [smallShine addAnimation:smallAnim forKey:@"path"];
+        //透明度渐变动画
         if (self.params.enableFlashing) {
-            //add flash anim
+//            CABasicAnimation *flash = [self getFlashAnim];
+//            CABasicAnimation *smallFlash = [self getFlashAnim];
+//            [bigShine addAnimation:flash forKey:@"bigFlash"];
+//            [smallShine addAnimation:smallFlash forKey:@"smallFlash"];
         }
     }
     
+    //旋转动画，结合扩散动画同时进行，看起来的效果是带有弧度的扩散
     CABasicAnimation *angleAnim = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
     angleAnim.duration = self.params.animDuration * 0.87;
     angleAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
@@ -136,11 +148,46 @@
     angleAnim.delegate = self;
     [self addAnimation:angleAnim forKey:@"rotate"];
     if (self.params.enableFlashing) {
-//        [self startFlash];
+        [self startFlash];
     }
-    
 }
 
+- (void)startFlash
+{
+    _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(flashAction)];
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10) {
+        _displayLink.preferredFramesPerSecond = 6;
+    }else{
+        _displayLink.frameInterval = 10;
+    }
+    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+}
+
+- (void)flashAction
+{
+    NSLog(@"%s %d",__FUNCTION__, flashCount++);
+    for (int i=0; i<self.params.shineCount; i++) {
+        CAShapeLayer *bigShine = self.shineLayers[i];
+        bigShine.fillColor = self.params.colorRandom[(int)(arc4random())%self.params.colorRandom.count].CGColor;
+        CAShapeLayer *smallShine = self.smallShineLayers[i];
+        smallShine.fillColor = self.params.colorRandom[(int)(arc4random())%self.params.colorRandom.count].CGColor;
+    }
+}
+
+- (CABasicAnimation *)getFlashAnim
+{
+    CABasicAnimation *flashAnim = [CABasicAnimation animationWithKeyPath:@"opacity"];
+    flashAnim.fromValue = @1;
+    flashAnim.toValue = @0;
+    flashAnim.duration = (arc4random()%20 + 60)/1000;
+    flashAnim.repeatCount = MAXFLOAT;
+    flashAnim.removedOnCompletion = NO;
+    flashAnim.autoreverses = YES;
+    flashAnim.fillMode = kCAFillModeForwards;
+    return flashAnim;
+}
+
+//shine扩散的动画
 - (CABasicAnimation *)getAngleAnim:(CAShapeLayer *)shine angle:(CGFloat)angle radius:(CGFloat)radius
 {
     CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"path"];
@@ -162,6 +209,8 @@
     if (flag) {
         [self removeAllAnimations];
         [self removeFromSuperlayer];
+        [_displayLink invalidate];
+        _displayLink = nil;
     }
 }
 

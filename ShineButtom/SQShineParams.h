@@ -22,7 +22,7 @@
 @property(nonatomic,assign)float shineDistanceMutiple;
 @property(nonatomic,assign)float smallShineOffsetAngle;
 @property(nonatomic,retain)UIColor *smallShineColor;
-@property(nonatomic,assign)CGFloat shineSize;
+@property(nonatomic,assign)CGFloat shineRadius;
 
 @property(nonatomic,retain)NSArray<UIColor *> *colorRandom;
 

@@ -28,13 +28,13 @@
     [self.view addSubview:heartBtn];
     
     
-    clickLayer = [[SQShineClickLayer alloc] init];
-    clickLayer.frame = CGRectMake(100, 200, 60, 60);
-    [self.view.layer addSublayer:clickLayer];
-    
-    cycleLayer = [[SQShineLayer alloc] init];
-    cycleLayer.frame = CGRectMake(100, 300, 60, 60);
-    [self.view.layer addSublayer:cycleLayer];
+//    clickLayer = [[SQShineClickLayer alloc] init];
+//    clickLayer.frame = CGRectMake(100, 200, 60, 60);
+//    [self.view.layer addSublayer:clickLayer];
+//    
+//    cycleLayer = [[SQShineLayer alloc] init];
+//    cycleLayer.frame = CGRectMake(100, 300, 60, 60);
+//    [self.view.layer addSublayer:cycleLayer];
     
 
     
