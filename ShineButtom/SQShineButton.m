@@ -11,19 +11,23 @@
 
 @interface SQShineButton()
 
-@property(nonatomic,retain)SQShineParams *params;
-
 @property(nonatomic,retain)UIColor *color;
 @property(nonatomic,retain)UIColor *fillColor;
 @property(nonatomic,retain)UIImage *image;
 
 @property(nonatomic,strong)SQShineClickLayer *clickLayer;
 @property(nonatomic,strong)SQShineLayer *shineLayer;
-@property(nonatomic,strong)SQShineAngleLayer *angleLayer;
 
 
 @end
 
+
+/**
+ 将多个动画组合起来
+ 1.----------按钮image缩放动画(SQShineClickLayer)---------
+ 2.--圆环缩放动画(SQShineLayer)--
+ 3.              ----------shine扩展动画(SQShineAngleLayer)--------
+ */
 @implementation SQShineButton
 
 -(instancetype)initWithFrame:(CGRect)frame
@@ -45,9 +49,6 @@
     _shineLayer = [[SQShineLayer alloc] init];
     _shineLayer.frame = self.bounds;
     [self.layer addSublayer:_shineLayer];
-    
-//    _angleLayer = [[SQShineAngleLayer alloc] initWithFrame:self.bounds params:self.params];
-//    [self.layer addSublayer:_angleLayer];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -57,12 +58,16 @@
         self.clickLayer.clicked = !self.clickLayer.clicked;
         [self.clickLayer startAnim];
         [self.shineLayer startAnim];
-        [self.angleLayer startAnim];
     }else{
         self.clickLayer.clicked = !self.clickLayer.clicked;
     }
     
 }
 
+- (void)setParams:(SQShineParams *)params
+{
+    _params = params;
+    self.shineLayer.params = _params;
+}
 
 @end

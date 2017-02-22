@@ -15,4 +15,6 @@
 
 @interface SQShineButton : UIControl
 
+@property(nonatomic,retain)SQShineParams *params;
+
 @end

@@ -23,18 +23,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     SQShineButton *heartBtn = [[SQShineButton alloc] initWithFrame:CGRectMake(100, 100, 60, 60)];
+
     [heartBtn addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:heartBtn];
     
     
-//    clickLayer = [[SQShineClickLayer alloc] init];
-//    clickLayer.frame = CGRectMake(100, 200, 60, 60);
-//    [self.view.layer addSublayer:clickLayer];
-//    
-//    cycleLayer = [[SQShineLayer alloc] init];
-//    cycleLayer.frame = CGRectMake(100, 300, 60, 60);
-//    [self.view.layer addSublayer:cycleLayer];
+    
+    //单独测试 layer
+    clickLayer = [[SQShineClickLayer alloc] init];
+    clickLayer.frame = CGRectMake(100, 200, 60, 60);
+    [self.view.layer addSublayer:clickLayer];
+
+    cycleLayer = [[SQShineLayer alloc] init];
+    cycleLayer.frame = CGRectMake(100, 300, 60, 60);
+    [self.view.layer addSublayer:cycleLayer];
     
 
     
